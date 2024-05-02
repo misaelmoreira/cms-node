@@ -1,0 +1,20 @@
+<%- include('../shared/header') %>
+
+<div class="container">
+  <div class="mt-5">
+    <h1>Cadastro:</h1>
+    <div><%= erro %></div>  
+  </div>
+
+  <div class="container mt-2 mb-5">   
+    <form action="/usuarios/cadastrar" method="post">
+      <%- include('partials/form') %>    
+      <!-- <input type="submit" value="Salvar"> -->
+      <button type="submit" class="btn btn-primary mt-3">Salvar</button>
+      <!-- <input type="button" onclick="window.location = '/usuarios';" value="Voltar"> -->
+      <button type="button" class="btn btn-secondary mt-3" onclick="window.location = '/usuarios';"> Voltar</button>
+    </form>    
+  </div>
+</div>
+
+<%- include('../shared/footer') %>

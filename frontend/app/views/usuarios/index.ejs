@@ -1,0 +1,39 @@
+<%- include('../shared/header') %>
+
+<div class="container mt-5 mb-5" style="min-height: 60vh">
+   <h1>Usuarios</h1> 
+   <p>Dados do Usuario na API</p>
+
+   <input type="button" id="novo-registro" class="btn btn-primary mb-3" onclick="window.location = '/usuarios/novo'" value="Novo" />
+   <table class="table">
+    <thead>
+        <tr>
+            <td>ID</td>
+            <td>Nome</td>
+            <td>Login</td>
+            <td>Senha</td>
+            <td>E-mail</td>
+            <td class="alterar">Alterar</td>
+            <td class="excluir">Excluir</td>
+        </tr>
+    <thead>
+    <tbody>
+       <% for(var i = 0; i < usuarios.length; i++){ 
+           var usuario = usuarios[i];           
+        %>
+       <tr>
+           <td><%= usuario.id %></td>
+           <td><%= usuario.nome %></td>
+           <td><%= usuario.login %></td>
+           <td><%= usuario.senha %></td>
+           <td><%= usuario.email %></td>
+           <td><input type="button" class="btn btn-info" onclick="window.location = '/usuarios/<%= usuario.id %>/editar'" value="Alterar" /></td>
+           <td><input type="button" class="btn btn-danger" onclick= "excluir(<%= usuario.id %>, '/usuarios/<%= usuario.id %>/excluir')" value="Excluir" /></td>
+        </tr>
+        <% } %>
+    </tbody>
+   </table>
+    
+</div>
+
+<%- include('../shared/footer') %>

@@ -1,0 +1,46 @@
+{
+  "name": "cms-interface",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node app.js",
+    "jshint": "npx jshint app/*/*.js spec/app/*/*.js",
+    "behavior-test": "node node_modules/cucumber/bin/cucumber.js",
+    "unit-test": "npx jasmine",
+    "dev": "nodemon app.js",
+    "gulp": "node node_modules/gulp/bin/gulp.js",
+    "test": "node node_modules/jasmine/bin/jasmine.js && node node_modules/cucumber/bin/cucumber.js && node node_modules/jshint/bin/jshint app/*/*.js spec/app/*/*.js"
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "dotenv": "^16.3.1",
+    "ejs": "*",
+    "express": "^4.18.2",
+    "http-errors": "~1.6.3",
+    "morgan": "~1.9.1",
+    "request": "*"
+  },
+  "devDependencies": {
+    "chromedriver": "^100.0.0",
+    "cucumber": "^2.0.0-rc.6",
+    "grunt-contrib-cssmin": "*",
+    "grunt-contrib-uglify": "^5.1.0",
+    "gulp": "*",
+    "gulp-concat": "*",
+    "gulp-cssmin": "*",
+    "gulp-live-server": "*",
+    "gulp-livereload": "*",
+    "gulp-minify": "*",
+    "gulp-rename": "*",
+    "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "*",
+    "gulp-uglify": "*",
+    "jasmine": "*",
+    "jshint": "*",
+    "node-cache": "*",
+    "nodemon": "*",
+    "sass": "^1.49.10",
+    "selenium-webdriver": "*"
+  }
+}

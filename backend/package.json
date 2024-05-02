@@ -1,0 +1,29 @@
+{
+  "name": "cms",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node app.js",
+    "migrate:up": "cd ./app && npx sequelize-cli db:migrate",
+    "jshint": "node node_modules/jshint/bin/jshint app/*/*.js spec/app/*/*.js",
+    "test": "npx jasmine"
+  },
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "guid": "*",
+    "http-errors": "~1.6.3",
+    "jade": "^0.29.0",
+    "jasmine": "*",
+    "jshint": "*",
+    "morgan": "~1.9.1",
+    "mysql": "*",
+    "mysql2": "^3.9.7",
+    "request": "*",
+    "sequelize": "^6.37.3",
+    "sequelize-cli": "^6.6.2"
+  }
+}

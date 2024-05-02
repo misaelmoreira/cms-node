@@ -1,0 +1,41 @@
+<%- include('../shared/header') %>
+
+<div class="container mt-5 mb-5" style="min-height: 60vh">
+    <h1>Paginas</h1> 
+    <p>Dados do pagina na API</p>
+ 
+    <input type="button" id="novo-registro" class="btn btn-primary mb-3" onclick="window.location = '/paginas/novo'" value="Novo" />
+    <table class="table">
+     <thead>
+         <tr>
+             <td>ID</td>
+             <td>Nome</td>
+             <td>Preview</td>
+             <td class="alterar">Alterar</td>
+             <td class="excluir">Excluir</td>
+         </tr>
+     <thead>
+     <tbody>
+        <% for(var i = 0; i < paginas.length; i++){ 
+            var pagina = paginas[i];           
+         %>
+        <tr>
+            <td><%= pagina.id %></td>
+            <td><%= pagina.nome %></td>
+            <td>
+                <a href="/paginas/<%= pagina.id %>/preview" target="_blank">Preview</a>
+            </td>  
+            <td>
+                <input type="button" class="btn btn-info" onclick="window.location = '/paginas/<%= pagina.id %>/editar'" value="Alterar" />
+            </td>
+            <td>
+                <input type="button" class="btn btn-danger" onclick= "excluir(<%= pagina.id %>, '/paginas/<%= pagina.id %>/excluir')" value="Excluir" />
+            </td>
+         </tr>
+         <% } %>
+     </tbody>
+    </table>
+     
+ </div>
+
+<%- include('../shared/footer') %>

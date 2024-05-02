@@ -1,0 +1,23 @@
+<%- include('../shared/header') %>
+
+<div class="container">
+  <div class="mt-5">
+    <h1>
+      Alterar Pagina: 
+    </h1>
+  <div>
+    <%= pagina.erro %></div>
+  </div>
+
+  <div class="container mt-2 mb-5">   
+    <form action="/paginas/<%= pagina.id %>/atualizar" method="post"> 
+      <%- include('partials/form', {pagina: pagina})  %>   
+      <div class="mt-3">
+        <button type="submit" class="btn btn-warning">Atualizar</button>
+        <button type="button" class="btn btn-secondary" onclick="window.location = '/paginas';">Voltar</button>
+      </div>       
+    </form>    
+  </div>
+</div>
+
+<%- include('../shared/footer') %>

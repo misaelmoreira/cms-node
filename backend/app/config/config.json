@@ -1,0 +1,11 @@
+{
+  "development": {
+    "username": "root",
+    "password": "cms_backend_senha",
+    "database": "cms_backend_banco",
+    "host": "mysql",
+    "dialect": "mysql"
+  }
+}
+
+

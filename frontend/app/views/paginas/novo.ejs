@@ -1,0 +1,18 @@
+<%- include('../shared/header') %>
+
+<div class="container">
+  <div class="mt-5">
+    <h1>Cadastro:</h1>
+    <div><%= erro %></div>  
+  </div>
+
+  <div class="container mt-2 mb-5">   
+    <form action="/paginas/cadastrar" method="post">
+      <%- include('partials/form') %>    
+      <button type="submit" class="btn btn-primary mt-3">Salvar</button>
+      <button type="button" class="btn btn-secondary mt-3" onclick="window.location = '/paginas';"> Voltar</button>
+    </form>    
+  </div>
+</div>
+
+<%- include('../shared/footer') %>
