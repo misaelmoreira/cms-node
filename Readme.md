@@ -2,6 +2,12 @@
 
 Esta é uma aplicação web que consiste em um backend e um frontend, ambos construídos com Node.js. O backend é uma API construída com Node.js, enquanto o frontend é renderizado usando o mecanismo de modelo EJS.
 
+## Preview
+
+![Preview da Aplicação](./imagens/tela-home.png)
+![Preview da Aplicação](./imagens/tela-usuarios.png)
+![Preview da Aplicação](./imagens/tela-paginas.png)
+
 ## Tecnologias Utilizadas
 
 - Backend:

@@ -17,3 +17,7 @@ footer h6 {
 footer a{
   text-decoration: none;
 }
+
+.table a {
+  color: black!important;
+}
